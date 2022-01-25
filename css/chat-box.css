@@ -1,0 +1,148 @@
+.open-button-1 {
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 50px;
+}
+
+.open-button-2 {
+    /* background-color: #555; */
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 50px;
+}
+
+
+/* The popup chat - hidden by default */
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 125px;
+    /* border: 3px solid #f1f1f1; */
+    z-index: 9;
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+/* Full-width textarea */
+
+.form-container textarea {
+    width: 89%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 50px;
+}
+
+.inputNameOnChatPopUp {
+    width: 89%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+}
+
+.inputEmailOnChatPopUp {
+    width: 89%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+}
+
+.inputPhoneOnChatPopUp {
+    width: 89%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+}
+
+
+/* When the textarea gets focus, do something */
+
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+/* Set a style for the submit/send button */
+
+.form-container .btn {
+    background-color: #f5deb3;
+    color: black;
+    font-weight: bold;
+    font-family: svn-poppins;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+
+/* Add a red background color to the cancel button */
+
+.form-container .cancel {
+    background-color: red;
+}
+
+
+/* Add some hover effects to buttons */
+
+.form-container .btn:hover,
+.open-button-1:hover,
+.open-button-2:hover {
+    opacity: 1;
+}
+
+
+/* ---------------trở về đầu trang------------------ */
+
+#topBtn {
+    display: block;
+    position: fixed;
+    bottom: 170px;
+    right: 25px;
+    /* z-index: 2147483645; */
+    z-index: 9999;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 15px;
+    width: 67px;
+}
+
+#topBtn:hover {
+    opacity: 1;
+}

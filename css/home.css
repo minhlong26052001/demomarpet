@@ -1,0 +1,503 @@
+:root {
+    --background-color: linear-gradient(white 20%, #C0466E 20%);
+    --background-color-1: linear-gradient(to bottom, #C0466E 60%, #fff 0);
+    --background-color-img: #FEFAE0;
+    --color-1: wheat;
+    --color-2: palevioletred;
+}
+
+.content {
+    margin: auto;
+    max-width: 1300px;
+}
+
+.slide-container {
+    width: 92.3%;
+    position: relative;
+    margin: auto;
+    /* display: none; */
+}
+
+.slide-container>img {
+    width: 100%;
+}
+
+.text {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: white;
+    width: 30%;
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px 2px black;
+    word-spacing: 5px;
+}
+
+.text>h2 {
+    margin-bottom: 20px;
+}
+
+.btn_in_homepage {
+    background-color: var(--color-1);
+    font-size: 18px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 18px;
+    font-weight: bold;
+}
+
+.btn_in_homepage:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #AA272F;
+}
+
+.dot-slider {
+    line-height: 1;
+    display: block;
+    padding: 5px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/*-------------------------------- danh mục nổi bật----------------------------- */
+
+.homepage-section-heading {
+    width: 92.3%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    align-items: center;
+    padding: 10px;
+}
+
+.homepage-section-heading>h2 {
+    background-color: white;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+.homepage-section-heading>hr {
+    margin-top: 0px;
+    background-color: #707070;
+    width: 99%;
+    position: absolute;
+    z-index: -1;
+    height: 1px;
+}
+
+.highlight-cate-container,
+.homepage-service--container {
+    background: var(--background-color);
+    display: flex;
+    padding: 0% 4%;
+    justify-content: space-between;
+}
+
+.highlight-cate,
+.service-item {
+    color: white;
+    font-size: 17px;
+    flex-basis: 32%;
+    position: relative;
+    height: auto;
+}
+
+.prize {
+    position: absolute;
+    width: 20%;
+    left: 0px;
+    top: 0px;
+}
+
+.img-container {
+    background-color: var(--background-color-img);
+    width: 100%;
+    /* padding: 20px; */
+    /* text-align: center; */
+    display: inline-block;
+}
+
+.img-container>img {
+    width: 90%;
+    margin: 20px;
+}
+
+.highlight-cate-title,
+.service-title {
+    padding: 20px 0px 5px 0px;
+}
+
+.highlight-cate-act,
+.service-act {
+    padding-bottom: 20px;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/*--------------- sản phẩm flashsale------------- */
+
+.homepage-flashsale-products,
+.homepage-blog-container {
+    padding: 0px 40px;
+    margin: 50px 0px;
+}
+
+.flashsale-products-container,
+.homepage-blog-item-container {
+    padding: 36px 23px 0px 23px;
+    background: var(--background-color-1);
+}
+
+.flashsale-products--top,
+.homepage-blog--top {
+    margin-bottom: 3%;
+    color: white;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flashsale-products--top--title>h2 {
+    color: var(--color-1);
+    margin: 1% 0 2% 0;
+}
+
+.flashsale-products--top--title>p {
+    max-width: 300px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.flashsale-products--bottom,
+.homepage-blog--bottom {
+    max-width: 1000px;
+    /* width: 90%; */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.flashsale-products-col,
+.blog-item {
+    width: 354px;
+    height: 100%;
+    min-height: 1px;
+    padding: 15px;
+    /* float: left; */
+}
+
+.shadow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 36px;
+    background-color: white;
+    line-height: 20px;
+}
+
+.shadow>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.shadow>a>img {
+    width: 100%;
+}
+
+.shadow:hover {
+    box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    height: fit-content;
+    text-align: center;
+    max-width: 250px;
+}
+
+.card-title {
+    margin-top: 15px;
+}
+
+.card-price {
+    margin-top: 15px;
+}
+
+.card-price>a {
+    color: black;
+}
+
+.sale-price {
+    text-decoration: line-through;
+}
+
+/* .prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 2;
+} */
+
+
+/* ---------------survice----------------- */
+
+
+/* .survice-container>img {
+    width: 100%;
+} */
+
+
+/* .survice-container {
+    height: auto;
+} */
+
+
+/*---------------------- blog----------------------- */
+
+/* .homepage-blog--top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+} */
+
+.btn_in_blog {
+    margin-top: 0px;
+}
+
+.homepage-blog--top--title>h2 {
+    color: var(--color-1);
+    margin: 1% 0 2% 0;
+}
+
+.homepage-blog--top--title>p {
+    max-width: 400px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.blog-item-title {
+    background-color: #C4C4C4;
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.blog-item>.shadow>a {
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-item-title>h4 {
+    height: 40px;
+    line-height: 20px;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+/* .prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+.slider-mobile{
+    display: none;
+}
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 1172px) {
+    /* .survice-container {
+        height: 300px;
+    } */
+    .text {
+        top: 20px;
+    }
+}
+
+@media only screen and (max-width: 983px) {
+    /* .survice-container {
+        height: 250px;
+    } */
+    .text {
+        top: 0px;
+        right: 13px;
+        box-shadow: none;
+        bottom: 2%;
+    }
+    .text>h2 {
+        font-size: 18px;
+    }
+    .text>p {
+        font-size: 12px;
+    }
+    .btn_in_homepage {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* .survice-container {
+        height: 200px;
+    } */
+}
+
+@media only screen and (max-width: 747px) {
+    .slider-mobile{
+        display: block;
+    }
+    .slider-normal{
+        display: none;
+    }
+    .slide-container>img {
+        height: 100%;
+    }
+    .text {
+        display: none;
+    }
+    /* .homepage-section-heading {
+        width: 100%;
+    } */
+    .highlight-cate-container,
+    .homepage-service--container {
+        flex-direction: column;
+        background: 0 0;
+        padding: 0px;
+    }
+    .highlight-cate,
+    .service-item {
+        background: var(--background-color);
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-top: 20px;
+    }
+    .prize {
+        width: 15%;
+        left: 40px;
+    }
+    .survice-container {
+        height: auto;
+    }
+    .homepage-flashsale-products,
+    .homepage-blog-container {
+        padding: 0px;
+    }
+    .homepage-blog--bottom {
+        flex-direction: column;
+        padding: 0px;
+    }
+    .homepage-blog-item-container {
+        background: 0 0;
+        padding: 0px;
+    }
+    .blog-item {
+        background: var(--background-color-1);
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-top: 20px;
+        width: auto;
+    }
+    .homepage-blog--top {
+        background: #a2b439;
+        padding: 4%;
+    }
+    .blog-item-title {
+        font-size: 17px;
+    }
+    .homepage-blog--top--title>h2 {
+        color: white;
+    }
+    .btn_in_homepage {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .homepage-blog--top, .flashsale-products--top {
+        flex-direction: column;
+    }
+    .btn_in_homepage {
+        margin-top: 20px;
+    }
+    .homepage-section-heading>h2{
+        text-align: center;
+    }
+}

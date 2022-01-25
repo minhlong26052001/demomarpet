@@ -1,0 +1,13 @@
+@font-face {
+    font-family: SVN-Poppins;
+    src: url(../font/PoppinsVN-400.ttf) format("truetype"),
+    url(../font/PoppinsVN-500.ttf) format("truetype"),
+    url(../font/PoppinsVN-600-italic.ttf) format("truetype"),
+    url(../font/PoppinsVN-600.ttf) format("truetype"),
+    url(../font/PoppinsVN-700.ttf) format("truetype");
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: SVN-Poppins;
+}
