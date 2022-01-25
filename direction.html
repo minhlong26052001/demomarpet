@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hướng dẫn đặt hàng</title>
+    <link rel="stylesheet" href="./css/services&help.css">
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/policy.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        load("header.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+    <div style="background-color: #f5deb3; margin-bottom:30px; height:120px">
+        <span class="module-header scenter">
+                <hr/>
+                <h2>HƯỚNG DẪN ĐẶT HÀNG</h2>
+                <hr/>
+        </span>
+    </div>
+    <div class="container">
+        <div class="welcome">
+            Nhằm giúp quỳ khách có trãi nghiệm mua hàng dễ dàng và nhanh chóng, Marpet xin mời quý khách thực hiện theo các bước hướng dẫn dưới đây:
+        </div>
+        <div class="step">
+            <div class="title">Bước 1: Tìm kiếm và lựa chọn sản phẩm </div>
+            <div class="content">
+                Các sản phẩm trong trang web được phân loại chi tiết theo từng nhóm sản phẩm. Ví dụ: Nhóm sản phẩm cho chó, Sản phẩm cho mèo, Quần áo, Vòng cổ dây dắt, Thức ăn..v.v. Quý khách nhấn chọn nhóm hàng mà mình quan tâm. Trường hợp Quý khách đã có định hướng
+                về sản phẩm cụ thể, Quý khách có thể sử dụng chức năng <span class="highlight"> "Search" </span> tìm kiếm của trang web để tìm kiếm nhanh sản phẩm đó.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="title">Bước 2: Xem thông tin sản phẩm và thêm vào giỏ hàng</div>
+            <div class="content">
+                <p> Quý Khách lướt xem các sản phẩm. Muốn xem chi tiết sản phẩm nào, Quý khách nhấn chọn vào ngay Tên sản phẩm hoặc Chi tiết . Nếu chọn mua sản phẩm nào, Quý khách hãy nhấn vào nút "Mua ngay" bên cạnh để đưa sản phẩm vào giỏ hàng. </p>
+                <p>
+                    Trong phần <span class="highlight"> "Chi tiết" </span>, Quý Khách có thể xem các thông tin về sản phẩm như tên hàng, tên thương hiệu - xuất xứ, đặc tính kỹ thuật công dụng và ảnh sản phẩm xem ở nhiều hướng.. </p>
+                <p> Trong trường hợp Quý khách muốn
+                    <span class="highlight" id="highlight"> đặt hàng ngay </span>, Quý khách có thể gọi điện ngay cho PetCity theo số điện thoại đặt hàng bên cạnh hoặc; chat Yahoo với Petcity để biết thêm tất cả các thông tin về sản phẩm. Quý Khách cũng
+                    có thể gửi những yêu cầu, hay thắc mắc về sản phẩm cho chúng tôi bằng cách đăng nhập để gửi câu hỏi rồi điền các thông tin và gửi cho chúng tôi.</p>
+                <p> Khi đã chọn mua được một sản phẩm, màn hình sẽ hiển thị <span class="highlight"> Danh sách sản phẩm đã chọn mua </span> chứa các sản phẩm mà Quý khách đã chọn cùng với thông tin về giá bán, số lượng đặt mua và tổng số tiền phải thanh toán.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="title">Bước 3: Xem lại Giỏ hàng</div>
+            <div class="content">
+                <p> Quý Khách có thể sửa đổi lại cơ cấu của giỏ hàng bằng cách nhấp vào <span class="highlight"> "Giỏ Hàng" </span> . Để thay đổi số lượng của sản phẩm, Quý Khách điền trực tiếp vào ô "Số lượng" bên tay phải rồi nhấn phím Enter hoặc đơn giản
+                    là click chuột bên ngoài nhập liệu. Nếu muốn loại sản phẩm ra khỏi giỏ hàng, Quý Khách click và ô <span class="highlight"> "Xóa" </span>. </p>
+                <p> Nếu Quý khách muốn tiếp tục xem các sản phẩm khác, xin nhấn vào nút <span class="highlight"> "Tiếp Tục" </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="title">Bước 4: Đặt hàng</div>
+            <div class="content">
+                <p> PetCity phục vụ giao hàng miễn phí đến địa chỉ của Quý khách cho tất cả các đơn đặt hàng trong nội thành Tp.Hà Nội & một số khu vực Tp. Hồ Chí Minh </p>
+                <p> Nếu đồng ý đặt mua số lượng sản phẩm có trong giỏ hàng, Quý khách nhấn chọn nút "Thanh toán" bên dưới Giỏ Mua Hàng để chấp nhận thanh toán. Sau đó Quý khách cần đăng nhập tài khoản để điền các thông tin cần thiết để hoàn tất đơn đặt hàng.
+                </p>
+                <p> - Trường hợp Quý khách đã có sẵn tên truy cập và mật khẩu do PetCity cung cấp hay do Quý khách đã đăng ký trước đó, Quý khách hãy điền Tên truy cập và Mật khẩu vào mục Đăng Nhập và chọn nút "Đăng nhập". Nếu Quý khách là khách hàng mới
+                    chưa đăng ký tài khoản, Quý khách vui lòng đăng ký một Tài khoản mới. </p>
+                <p> - Sau khi đăng ký tài khoản xong, Quý khách có thể xem lại đơn đặt hàng, đồng thời điền chính xác các thông tin về địa điểm, thời gian giao hàng và phương thức thanh toán... </p>
+                <p> Quý Khách có thể ghi thêm các yêu cầu khác đối với đơn đặt hàng như địa điểm, thời gian... bằng cách điền vào mục "Ghi chú". Sau khi nhấn vào nút "Đặt hàng", báo đơn đặt hàng của Quý khách sẽ được gửi tới chúng tôi và chúng tôi sẽ giao
+                    hàng trong thời gian sớm nhất. </p>
+                <p> Quý khách cũng có thể gọi điện thoại đến Siêu thị PetCity để đặt hàng trực tiếp theo các số điện thoại sau: </p>
+                <p class="notice"> Tel: 024 3931 0777 - 024 3933 2727 | Hotline: 0987 612727</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="title">Bước 5: Thanh toán</div>
+            <div class="content">
+                <p> - Khi nhấn chọn <span class="highlight">Thanh toán</span>, quý khách nếu chưa đăng ký tài khoản vui lòng nhập đầy đủ thông tin yêu cầu.</p>
+                <p>- Tiếp theo khách hàng chọn phương thức thanh toán mà mình mong muốn.</p>
+                <p>- Kiểm tra lại chi tiết đơn hàng và nhấn nút <span class="highlight">Xác nhận</span> để hoàn tất mua hàng.</p>
+                <span class="notice">Lưu ý: Nhập đầy đủ và chính xác thông tin cá nhân để tụi mình có thể đưa hàng đến quý khách nhanh chóng và chính xác nhất.</span>
+            </div>
+        </div>
+        <div class="storeinformation">
+            <div class="title">Để biết thêm thông tin, Quý khách vui lòng liên hệ:</div>
+            <p><span class="highlight" id="highlight">HỆ THỐNG CỬA HÀNG MARPET:</span></p>
+            <p><span class="highlight"> Văn phòng Điều hành: </span> Tầng 79, Tòa nhà Landmark 81, 720A Điện Biên Phủ, P22, Q.Bình Thạnh, Thành phố Hồ Chí Minh</p>
+            <p><span class="highlight">Hà Nội:</span> 174 Kim Mã, Q.Ba Đình, Hà Nội</p>
+            <p><span class="highlight">Hồ Chí Minh:</span> 166 Lý Chính Thắng, Quận 3, Tp. HCM</p>
+            <p><span class="highlight"> Tel:</span> 024 3931 0777 - 024 3933 2727 <br><span class="highlight"> Hotline:</span> 0987 612727</p>
+            <p><span class="highlight"> E-mail:</span> petcity.vn@gmail.com <br><span> Web:</span> http://marpet.vn</p>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+
+    <script src="./js/flat-menu.js"></script>
+
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+
+</html>

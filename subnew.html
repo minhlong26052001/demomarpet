@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <link rel="stylesheet" href="./css/subnews.css">
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+    <script>
+        let urlparams = new URLSearchParams(location.search);
+        var id = urlparams.get('subNewId');
+    </script>
+    <script>
+        let app = angular.module("angularApp", []);
+        app.controller("DetailController", function($scope, $http) {
+            $http({
+                method: "GET",
+                url: "./json/subnews.json"
+            }).then(
+                function success(response) {
+                    $scope.selectedSubNew = response.data.find(value => value.newid == id)
+                },
+                function error(response) {
+                    $scope.error = response.statusText;
+                }
+            )
+        })
+    </script>
+</head>
+
+<body ng-app="angularApp" ng-controller="DetailController">
+    <!-- chèn html header -->
+    <!-- <div w3-include-html="header.html"></div> -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+
+    <div class="news_container">
+        <div class="news_header">
+            <div class="news_header-img">
+                <img src="{{selectedSubNew.image}}" alt="">
+            </div>
+            <div class="news_header-text-container">
+                <div style="width: 100%; margin: 0 auto">
+                    <div class="news_header-text-title">
+                        <h1>{{selectedSubNew.title}}</h1>
+                    </div>
+                    <div class="news_header-text-intro">
+                        <p>
+                            <i>
+                                    <br>
+                                    {{selectedSubNew.contents[0].content}}
+                                    </i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news_content">
+            <div class="news_content-text-title">
+
+                <h2>{{selectedSubNew.subtitles[0].subtitle}}</h2>
+            </div>
+            <div class="news_content-text">
+                <p style="margin-top: 10px;">
+                    <p>{{selectedSubNew.contents[1].content}}</p>
+                </p>
+            </div>
+            <br style="height: 50px;">
+            <div class="news_content-text-detail" id="detail1">
+                <div class="news_content-text-title1">
+                    <h2>{{selectedSubNew.subtitles[1].subtitle}}</h2>
+                </div>
+
+                <div class="news_content-text-content">
+                    <div class="news_content-text-content-left-img" style="width: 700px">
+                        <img src="{{selectedSubNew.image}}" alt="">
+                    </div>
+
+                    <ul class="news_ul">
+                        <p>
+                            {{selectedSubNew.contents[2].content}}
+                        </p>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+            <div class="news_content-text-detail" id="detail2">
+                <div class="news_content-text-title1">
+                    <h2>{{selectedSubNew.subtitles[2].subtitle}}</h2>
+                </div>
+
+                <div>
+                    <p>{{selectedSubNew.contents[3].content}}</p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- chèn html footer -->
+    <!-- <div w3-include-html="footer.html"></div> -->
+    <div id="footer" style="margin-top:30px"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+
+    <script src="./js/flat-menu.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+
+</html>

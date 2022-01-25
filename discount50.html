@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mùa đông không lạnh</title>
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: SVN-Poppins;
+    background-color: #f2f3f5;
+    line-height: 25px;
+}
+
+.news {
+    margin: 20px;
+padding: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+.news-content {
+    display: block;
+    text-align: justify;
+    padding: 0 30px;
+
+}
+
+#icon {
+    width: 18px;
+    height: 18px;
+}
+
+ .news h2 {
+    color: palevioletred;
+    margin-bottom: 20px;
+}
+
+
+#highlight {
+    color: red;
+    font-weight: 700;
+}
+
+p#illustrate {
+    text-align: center;
+}
+
+.news li {
+    list-style-type: inherit;
+    margin:0 20px;
+  
+}
+
+a {
+    cursor: pointer;
+}
+.news span{
+    font-weight: 600;
+    
+}
+        @media screen and (max-width: 768px) {
+            .news-img img {
+                width: 500px;
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .news-img img {
+                width: 300px;
+            }
+            .dathang_img{
+                width: 150px;
+                height: 50px;
+            }
+            .news-content{
+                padding: 0px;
+            }
+        }
+        @media screen and (max-width: 385px) {
+            .news-img img {
+                width: 250px;
+            }
+            .dathang_img{
+                width: 130px;
+                height: 30px;
+            }
+            .news-content{
+                padding: 0px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div w3-include-html="header.html"></div> -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+  
+    <div class="news">
+        <h2 class="news-title">
+            MÙA ĐÔNG KHÔNG LẠNH - SALE UP TO 50% QUẦN ÁO CHO THÚ CƯNG
+        </h2>
+        <div class="news-img" >
+            <img src="./library/discount50.png" width="700px" >
+        </div>
+        <p  style="margin-top: 10px;">
+            <a href="index.html">
+                <img src="./library/dathangbutton.gif" width="313" height="75" class="dathang_img">
+            </a>
+        </p>
+        <div class="news-content">
+            <p>
+                <h4>
+        <img src="./library/dogicon.png" id="icon" alt="">
+        &nbsp;Năm mới gõ cửa bằng những trận rét liên hồi. Làm sao để cho boss chó mèo một năm mới ấm áp, xinh đẹp mà không lo cháy ví sen?
+    </h4> <br>
+                <span>Đến ngay <span id="highlight"> MARPET </span> với chương trình sale 50% các sản phẩm nệm và quần áo</span>
+            </p>
+            <p>
+                <span>
+                    <img src="./library/carticon.png" alt="" id="icon">&nbsp; <a href=""> Đặt hàng ngay </a>
+                </span> <br>
+                <span>
+                    <img src="./library/clockicon.png" id="icon" alt="">&nbsp; Thời gian: 24/12/2021 - 15/1/2022
+                </span> <br>
+                <span>
+                    <img id="icon" src="./library/locationicon.png" alt=""> &nbsp;Địa điểm: Áp dụng tại tất cả các cửa hàng và online của hệ thống Petcity
+                </span>
+            </p>
+            <p style="margin-bottom: 5px">
+                <span>
+                <img src="./library/noticeicon.png" alt="" >&nbsp; Lưu ý:
+            </span>
+
+                <ul style="margin-top:5px" class="news_ul">
+                    <li>Ưu đãi freeship khu vực nội thành khi mua online với hóa đơn có giá trị sau khi đã chiết khấu >200k.</li>
+                    <li>Không áp dụng cùng các chương trình khuyến mãi khác</li>
+                    <li>Đơn đặt hàng trong ngày nếu chưa kịp xử lý vẫn sẽ được hưởng ưu đãi bình thường.</li>
+                </ul>
+            </p>
+            <br>
+            <p><span id="highlight">HỆ THỐNG CỬA HÀNG MARPET:</span></p>
+            <p><span> Văn phòng Điều hành: </span> Tầng 79, Tòa nhà Landmark 81, 720A Điện Biên Phủ, P22, Q.Bình Thạnh, Thành phố Hồ Chí Minh</p>
+            <p><span>Hà Nội:</span> 174 Kim Mã, Q.Ba Đình, Hà Nội</p>
+            <p><span>Hồ Chí Minh:</span> 166 Lý Chính Thắng, Quận 3, Tp. HCM</p>
+            <p><span> Tel:</span> 024 3931 0777 - 024 3933 2727 <br><span> Hotline:</span> 0987 612727</p>
+            <p><span> E-mail:</span> marpet@gmail.com <br><span> Web:</span> http://marpet.vn</p>
+        </div>
+    </div>
+    <!-- <div w3-include-html="footer.html"></div> -->
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+
+    <script src="./js/flat-menu.js"></script>
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+    
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+
+</html>

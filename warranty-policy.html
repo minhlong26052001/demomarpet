@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarPet</title>
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="./css/policy.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+
+    <style>
+        .listTimeLine {
+            color: #db7093;
+            font-weight: bold;
+            font-size: 19px;
+        }
+        
+        .timeline li {
+            margin-bottom: 10px;
+        }
+        
+        ol li ol li {
+            font-weight: normal;
+            color: black;
+        }
+        
+        .khoangCachVoiLePhai {
+            margin-right: 75px;
+        }
+        /* The actual timeline (the vertical ruler) */
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* The actual timeline (the vertical ruler) */
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #db7093;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        /* Container around content */
+        
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        /* The circles on the timeline */
+        
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #db7093;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        /* Place the container to the left */
+        
+        .left {
+            left: 0;
+        }
+        /* Place the container to the right */
+        
+        .right {
+            left: 50%;
+        }
+        /* Add arrows to the left container (pointing right) */
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        /* Add arrows to the right container (pointing left) */
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        /* Fix the circle for containers on the right side */
+        
+        .right::after {
+            left: -16px;
+        }
+        /* The actual content */
+        
+        .content {
+            padding: 20px 30px;
+            background-color: wheat;
+            position: relative;
+            border-radius: 6px;
+        }
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        
+        @media screen and (max-width: 600px) {
+            .timeLineBienMat {
+                display: none;
+            }
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+            /* Full-width containers */
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            /* Make sure that all arrows are pointing leftwards */
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            /* Make sure all circles are at the same spot */
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- chèn html header -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- phần nội dung -->
+    <div>
+        <div>
+            <div style="background-color: #f5deb3; margin-bottom:30px; height:120px">
+                <span class="module-header scenter">
+                        <hr/>
+                        <h2>CHÍNH SÁCH BẢO HÀNH</h2>
+                        <hr/>
+                </span>
+            </div>
+            <br>
+            <p style="text-align: center;">Bảo hành sản phẩm là khắc phục những lỗi hỏng hóc, sự cố kỹ thuật xảy ra do lỗi của nhà sản xuất.</p>
+            <br>
+        </div>
+    </div>
+
+    <ol>
+        <div class="timeline">
+            <div class="timeLineBienMat">
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <li class="listTimeLine">ĐIỀU KIỆN BẢO HÀNH</li>
+                    <p style="color: red;">Sản phẩm được bảo hành miễn phí nếu sản phẩm đó đáp ứng đủ các điều kiện sau:</p><br>
+                    <ol type="a">
+                        <li>Còn thời hạn bảo hành (được tính kể từ ngày khách hàng nhận được sản phẩm).</li>
+                        <li>Khách hàng có đủ cả hóa đơn bán hàng của MarPet , phiếu bảo hành, tem bảo hành theo quy định của từng Nhà sản xuất.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <li class="listTimeLine">NƠI NHẬN BẢO HÀNH</li>
+                    <ol type="a">
+                        <li>MarPet nhận sản phẩm cần bảo hành của khách: Khách hàng chuyển sản phẩm cần bảo hành đến bất kỳ cửa hàng thuộc hệ thống của MarPet. Chúng tôi sẽ có trách nhiệm gửi sản phẩm đến trung tâm bảo hành của nhà sản xuất. Sau khi sản phẩm
+                            được bảo hành, MarPet sẽ thông báo cho khách hàng đên nhận lại sản phẩm tại hệ thống cửa hàng của MarPet.</li>
+                        <p style="color: red;">Các chi phí phát sinh trong quá trình thực hiện việc bảo hành như phí vận chuyển, thay thế linh kiện v.v… sẽ do khách hàng chi trả.</p><br>
+                        <li>Khách hàng gửi trực tiếp sản phẩm cần bảo hành đến các trung tâm bảo hành của nhà sản xuất. Nhà sản xuất sẽ có trách nhiệm thực hiện việc bảo hành và thông báo kết quả cho khách hàng.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <li class="listTimeLine">NHỮNG TRƯỜNG HỢP KHÔNG ĐƯỢC BẢO HÀNH</li>
+                    <ol type="a">
+                        <li>Sản phẩm đã hết thời hạn bảo hành.</li>
+                        <li>Phiếu bảo hành không được điền đầy đủ các thông tin khách hàng và các thông tin trên sản phẩm không trùng khớp với thông tin ghi trên phiếu bảo hành.</li>
+                        <li>Hóa đơn bán hàng bị mất hoặc bị rách không đọc được thông tin về sản phẩm.</li>
+                        <li>Phiếu bảo hành, Tem bảo hành bị rách hoặc mất; Tem bảo hành bị dán đè, hoặc Tem bảo hành bị sửa đổi nội dung (kể cả Tem bảo hành gốc).</li>
+                        <li>Tự ý tháo dỡ, sửa chữa sản phẩm bởi các cá nhân khác không phải là nhân viên của Nhà sản xuất.</li>
+                        <li>Sử dụng sai hướng dẫn hoặc quy định của nhà sản xuất: Sai điện áp, sản phẩm bị cháy nổ hay hỏng hóc do tác động cơ học; biến dạng do rơi, vỡ, va đập; bị xước, bị hỏng do ẩm ướt, hoen rỉ, chảy nước, động vật xâm nhập vào, thiên
+                            tai, hỏa hoạn.</li>
+                        <li>Theo các quy định riêng của nhà sản xuất.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </ol>
+
+    <!-- chèn html footer -->
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <!-- js mở chatbox và quay về đầu trang -->
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+    <!-- js khi kéo xuống thì hiện 1 thanh nav cố định ở đầu trang web  -->
+    <script src="./js/flat-menu.js"></script>
+
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+
+</html>

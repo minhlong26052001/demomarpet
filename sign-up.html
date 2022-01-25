@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #f2f3f5;
+            font-family: SVN-Poppins;
+        }
+        
+        .signup_container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex: 2;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .signup_form {
+            padding: 20px 100px;
+            width: 50%;
+            z-index: 2;
+            background-color: white;
+            border-radius: 20px;
+            max-width: 600px;
+            max-height: 600px;
+            box-shadow: 0px 0px 25px 2px rgb(173, 173, 173, 0.5);
+        }
+        
+        .signup_img-left {
+            width: 25%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .signup_img-right {
+            width: 25%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        #img_left1 {
+            max-width: 180px;
+            max-height: 300px;
+            position: absolute;
+            top: 60%;
+            margin-bottom: 0px;
+            display: block;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        
+        #img_left2 {
+            max-width: 180px;
+            max-height: 150px;
+            height: auto;
+            width: 50%;
+            position: relative;
+            z-index: 2;
+            top: 45%;
+            left: 30%;
+            display: block;
+        }
+        
+        #img_right {
+            max-width: 180px;
+            max-height: 300px;
+            position: absolute;
+            top: 30%;
+            right: 0px;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        /* h1 {
+            color: #db7093;
+        } */
+        
+        .signup_title-text {
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        .signup_subtitle-text {
+            text-align: center;
+        }
+        
+        .signup_form-row {
+            width: 100%;
+            margin-top: 25px;
+            position: relative;
+        }
+        
+        .signup_form-label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        
+        .signup_form-input {
+            width: 100%;
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background-color: #f2f3f5;
+            border-radius: 5px;
+            display: block;
+        }
+        
+        .signup_form-row.success input {
+            border: 1.5px solid #2ecc71;
+        }
+        
+        .signup_form-row.error input {
+            border: 1.5px solid #e74c3c;
+        }
+        
+        .signup_form-row.error small {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        
+        .signup_form-row i {
+            position: absolute;
+            top: 33px;
+            right: 5px;
+            font-size: 16px;
+            visibility: hidden;
+        }
+        
+        .signup_form-row.success i.fa-check-circle {
+            visibility: visible;
+            color: #2ecc71;
+        }
+        
+        .signup_form-row.error i.fa-exclamation-circle {
+            visibility: visible;
+            color: #e74c3c;
+        }
+        
+        .signup_form-row small {
+            visibility: hidden;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+        
+        .signup_form-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .signup_button {
+            background-color: palevioletred;
+            color: wheat;
+            border-style: none;
+            border-radius: 20px;
+            height: 40px;
+            font-weight: bold;
+            font-size: 18px;
+            width: 300px;
+        }
+        
+        .signup_button:hover {
+            background-color: hsl(340, 57%, 64%, 0.5);
+            color: black;
+            box-shadow: 0px 0px 25px 2px rgb(173, 173, 173, 0.5);
+        }
+        
+        .signup_container span {
+            color: red;
+        }
+        
+        @media screen and (max-width:780px) {
+            .signup_form {
+                width: 300px;
+                padding: 50px;
+            }
+        }
+        
+        @media screen and (max-width:650px) {
+            .signup_form {
+                width: 250px;
+                padding: 40px;
+            }
+        }
+        
+        @media screen and (max-width:500px) {
+            .signup_form {
+                width: 200px;
+                padding: 20px;
+            }
+            .signup_form-row {
+                margin-top: 20px;
+            }
+        }
+        
+        @media screen and (max-width:414px) {
+            .signup_form {
+                width: 80%;
+                padding: 20px;
+            }
+            .signup_form-row {
+                margin-top: 20px;
+            }
+            .signup_form-row small {
+                font-size: 11px;
+                margin-bottom: 3px;
+            }
+            .signup_title-text {
+                font-size: 18px;
+            }
+            .signup_subtitle-text {
+                font-size: 14px;
+                text-align: center;
+            }
+            .signup_img-right {
+                visibility: hidden;
+            }
+            .signup_img-left {
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- chèn html header -->
+    <!-- <div w3-include-html="header.html"></div> -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-------------------------Phần nội dung---------------------------------- -->
+    <br>
+
+    <div class="signup_container">
+
+        <div class="signup_img-left" style="margin-bottom:220px;">
+            <img src="./library/signup_img1.png" alt="" id="img_left1">
+            <img src="./library/hello.png" id="img_left2" alt="">
+        </div>
+
+
+        <div class="signup_form">
+            <div class="signup_title">
+                <h1 class="signup_title-text" style="color:#db7093">Đăng ký</h1>
+
+                <div class="signup_subtitle-text">Bạn chưa có tài khoản? Đăng ký ngay!</div>
+
+            </div>
+            <div class="signup_content">
+                <form class="register_form" id="register_form">
+                    <div class="signup_form-row">
+                        <label for="email" class="signup_form-label">Email của bạn <span>*</span></label> <br>
+                        <input type="text" name="email" class="signup_form-input" id="reEmail">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-row">
+                        <label for="password" class="signup_form-label">Mật khẩu<span>*</span></label> <br>
+                        <input type="password" name="password" class="signup_form-input" id="repw">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle" id="fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-row">
+                        <label for="password2" class="signup_form-label">Nhập lại mật khẩu<span>*</span></label> <br>
+                        <input type="password" name="password2" class="signup_form-input" id="rerwp">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-row">
+                        <label for="name" class="signup_form-label">Họ và Tên <span>*</span></label> <br>
+                        <input type="text" name="name" class="signup_form-input" id="fullname">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-row">
+                        <label for="phonenumber" class="signup_form-label">Số điện thoại <span>*</span></label> <br>
+                        <input type="text" name="phonenumber" class="signup_form-input" id="phonenumber">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-row">
+                        <label for="address" class="signup_form-label">Địa chỉ <span>*</span></label> <br>
+                        <input type="text" name="address" class="signup_form-input" id="address">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="signup_form-button">
+                        <button class="signup_button" id="reBtn">Tạo tài khoản</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="signup_img-right">
+            <img src="./library/signup_img2.png" id="img_right" alt="">
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+
+    <!-- chèn html footer -->
+    <!-- <div w3-include-html="footer.html"></div> -->
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- function để chèn html -->
+    <script>
+        w3.includeHTML();
+    </script>
+    <!-- js mở chatbox và quay về đầu trang -->
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+    <!-- js khi kéo xuống thì hiện 1 thanh nav cố định ở đầu trang web  -->
+    <script src="./js/flat-menu.js"></script>
+
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+
+
+</body>
+<!-- import + configuration -->
+<script type="module" src="./js/register.js"></script>
+
+</html>

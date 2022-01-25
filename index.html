@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarPet</title>
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- chèn html header -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- phần nội dung -->
+    <div class="content">
+        <!-- slide banner đầu trang -->
+        <div class="slideshow-banner">
+            <div class="slide-container fade">
+                <img class="slider-normal" src="./library/banner2.png" alt="">
+                <img class="slider-mobile" src="./library/slider_res1.png" alt="">
+                <div class="text">
+                    <h2>Siêu chính hãng</h2>
+                    <p>100% thức ăn nhập khẩu</p>
+                    <p> Sản phẩm chất lượng cao với thương hiệu đa dạng</p>
+                    <a href="Dog-Product.html?category=d_fo"><button class="btn_in_homepage" type="button">Ghé ngay</button></a>
+                </div>
+            </div>
+
+            <div class="slide-container fade">
+                <img class="slider-normal" src="./library/valentinebanner.png" alt="">
+                <img class="slider-mobile" src="./library/slider_res2.png" alt="">
+            </div>
+
+            <div class="slide-container fade">
+                <img class="slider-normal" src="./library/slider3.gif" alt="">
+                <img class="slider-mobile" src="./library/slider_res3.gif" alt="">
+            </div>
+        </div>
+        <div class="dot-slider" style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!-- danh mục nổi bật -->
+        <div class="homepage-hightlight-cate">
+            <div class="homepage-hightlight-cate--heading homepage-section-heading">
+                <h2>Danh mục bán chạy nhất</h2>
+                <hr>
+            </div>
+            <div class="highlight-cate-container">
+                <a href="Cat-Product.html?category=c_fo" class="highlight-cate">
+                    <img class="prize" src="./library/prize-2.png" alt="">
+                    <div class="img-container">
+                        <img src="./library/hightlight-cate-2-removebg-preview.png" alt="">
+                    </div>
+                    <div class="highlight-cate-title">Thức ăn cho mèo</div>
+                    <div class="highlight-cate-act">Ghé thăm</div>
+                </a>
+                <a href="Dog-Product.html?category=d_fo" class="highlight-cate">
+                    <img class="prize" src="./library/prize-1.png" alt="">
+                    <div class="img-container">
+                        <img src="./library//highight-cate-1-removebg-preview.png" alt="">
+                    </div>
+                    <div class="highlight-cate-title">Thức ăn cho chó</div>
+                    <div class="highlight-cate-act">Ghé thăm</div>
+                </a>
+                <a href="Cat-Product.html?category=c_toy" class="highlight-cate">
+                    <img class="prize" src="./library/prize-3.png" alt="">
+                    <div class="img-container">
+                        <img src="./library/hightlight-cate-3-removebg-preview.png" alt="">
+                    </div>
+                    <div class="highlight-cate-title">Đồ chơi cho mèo</div>
+                    <div class="highlight-cate-act"> Ghé thăm</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- flashsale -->
+        <div class="homepage-flashsale-products">
+            <div class="flashsale-products-container">
+                <div class="flashsale-products--top">
+                    <div class="flashsale-products--top--title">
+                        <h2>&#8226; Đang khuyến mãi</h2>
+                        <p>Từ ngày 01/01 - 15/02</p>
+                    </div>
+                    <a href="product-sale.html"><button class="btn_in_blog btn_in_homepage">Mua sắm ngay</button></a>
+                </div>
+                <div class="flashsale-products--bottom">
+                    <div class="flashsale-products-col fade">
+                        <div class="shadow">
+                            <a href="products_detail.html?productid=4"><img src="./library/products/dog/DG_FO_sp4-1.jpg" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="products_detail.html?productid=4">Thức ăn cho chó con hạt mềm ZENITH Puppy</a>
+                                </h4>
+                                <p class="card-price">
+                                    <a href="products_detail.html?productid=4"><span class="sale-price">200.000đ</span> &#173; 180.000đ</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashsale-products-col fade">
+                        <div class="shadow card">
+                            <a href="products_detail.html?productid=11"><img src="./library/products/dog/DG_CL_sp10-blue.jpg" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="products_detail.html?productid=11">Yếm cho chó kèm dây dắt Ambaby 1JXS043</a>
+                                </h4>
+                                <p class="card-price">
+                                    <a href="products_detail.html?productid=11"><span class="sale-price">255.000đ</span> &#173; 200.000đ</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashsale-products-col fade">
+                        <div class="shadow card">
+                            <a href="products_detail.html?productid=128"><img src="./library/products/cat/CT_CA_sp9.jpg" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="products_detail.html?productid=128">Nhà cây cho mèo Cat Tree QQ80764</a>
+                                </h4>
+                                <p class="card-price">
+                                    <a href="products_detail.html?productid=128"><span class="sale-price">5.500.000đ</span> &#173; 5.000.000đ</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- homepage dịch vụ -->
+        <div class="homepage-service">
+            <div class="homepage-service--heading homepage-section-heading">
+                <h2>Dịch vụ</h2>
+                <hr>
+            </div>
+            <div class="homepage-service--container">
+                <a href="service-spa.html" class="service-item ">
+                    <div class="img-container survice-container">
+                        <img src="./library/wash-sv.png" alt="">
+                    </div>
+                    <div class="service-title">Dịch vụ tắm rửa thú cưng</div>
+                    <div class="service-act">Tìm hiểu</div>
+                </a>
+                <a href="service-grooming.html" class="service-item ">
+                    <div class="img-container survice-container">
+                        <img src="./library/cut.png" alt="">
+                    </div>
+                    <div class=" service-title">Dịch vụ tỉa lông thú cưng</div>
+                    <div class="service-act">Tìm hiểu</div>
+                </a>
+                <a href="service-hotel.html" class="service-item">
+                    <div class="img-container survice-container">
+                        <img src="./library/ads.png" alt="">
+                    </div>
+                    <div class="service-title">Dịch vụ trông giữ thú cưng</div>
+                    <div class="service-act">Tìm hiểu</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- homepage blog -->
+        <div class="homepage-blog">
+            <div class="homepage-blog-container">
+                <div class="homepage-blog-item-container">
+                    <div class="homepage-blog--top">
+                        <div class="homepage-blog--top--title">
+                            <h2>&#8226; Blog</h2>
+                            <p><i> "Chuyên mục mở rộng kiến thức"</i></p>
+                        </div>
+                        <a href="MarpetNews.html"><button class="btn_in_blog btn_in_homepage">Tìm hiểu thêm</button></a>
+                    </div>
+                    <div class="homepage-blog--bottom">
+                        <div class=" blog-item">
+                            <div class="shadow">
+                                <a href="news1.html"><img src="./library/bl1.jpg" alt=""></a>
+                                <div class="blog-item-title">
+                                    <h4>
+                                        <a href="news1.html">Cách tự chữa viêm da cho chó mèo tại nhà</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="shadow">
+                                <a href="news2.html"><img src="./library/cun-mang-thai.png" alt=""></a>
+                                <div class="blog-item-title">
+                                    <h4>
+                                        <a href="news2.html">Chế độ dinh dưỡng cho cún mang thai</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <div class="shadow">
+                                <a href="news3.html"><img src="./library/blg05701.jpg" alt=""></a>
+                                <div class="blog-item-title">
+                                    <h4>
+                                        <a href="news3.html">Tắm cho mèo an toàn tại nhà</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- function tạo chuyển động cho slider banner -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide-container");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <!-- function để chèn html -->
+    <script>
+        w3.includeHTML();
+    </script>
+    <!-- js mở chatbox và quay về đầu trang -->
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+    <!-- js khi kéo xuống thì hiện 1 thanh nav cố định ở đầu trang web  -->
+    <script src="./js/flat-menu.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    
+    <script src="./js/fbPlugin.js"></script>
+
+</body>
+
+</html>

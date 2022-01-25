@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chat-box.css">
+    <style>
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 950px) {}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-announcement">
+            <!-- ------------------banner thông báo------------------ -->
+            <span class="announce-content">Tặng ngay voucher giảm 15% tổng hóa đơn cho khách hàng lần đầu mua sắm tại MarPet</span>
+        </div>
+        <!-- -----------------thanh menu cố định------------- -->
+        <nav class="slide-down-bar" id="slide-down-bar" style="z-index: 99999999;">
+            <div class="flat-menu">
+                <div class="dropdown-menu">
+                    <a><i class="fas fa-bars "></i></a>
+                    <div class="dropdown-menu--content">
+                        <div class="side-submenu dropdown-content-row">
+                            <a href="Dog-Product.html">Chó <i class="fas fa-caret-right"></i></a>
+                            <div class="side-submenu--content">
+                                <img src="./library/dog-195x195-shopcircle.png " alt=" ">
+                                <a href="Dog-Product.html?category=d_fo">Thức ăn</a>
+                                <a href="Dog-Product.html?category=d_cl">Quần áo</a>
+                                <a href="Dog-Product.html?category=d_co">Vòng cổ, dây dắt, rọ mõm</a>
+                                <a href="Dog-Product.html?category=d_ds">Dụng cụ ăn uống</a>
+                                <a href="Dog-Product.html?category=d_be">Mỹ phẩm, dụng cụ làm đẹp</a>
+                                <a href="Dog-Product.html?category=d_ca">Chuồng, giường, nhà, túi</a>
+                                <a href="Dog-Product.html?category=d_toy">Đồ chơi, phụ kiện huấn luyện</a>
+                            </div>
+                        </div>
+
+                        <div class="side-submenu dropdown-content-row">
+                            <a href="ca">Mèo <i class="fas fa-caret-right"></i></a>
+                            <div class="side-submenu--content">
+                                <img src="./library/cat-195x195-shopcircle.png " alt=" ">
+                                <a href="Cat-Product.html?category=c_fo">Thức ăn</a>
+                                <a href="Cat-Product.html?category=c_cl">Quần áo</a>
+                                <a href="Cat-Product.html?category=c_co">Vòng cổ, dây dắt, rọ mõm</a>
+                                <a href="Cat-Product.html?category=c_ds">Dụng cụ ăn uống</a>
+                                <a href="Cat-Product.html?category=c_be">Mỹ phẩm, dụng cụ làm đẹp</a>
+                                <a href="Cat-Product.html?category=c_ca">Chuồng, giường, nhà, túi</a>
+                                <a href="Cat-Product.html?category=c_toy">Đồ chơi, phụ kiện huấn luyện</a>
+                                <a href="Cat-Product.html?category=c_sa">Cát vệ sinh</a>
+                            </div>
+                        </div>
+                        <span class="dropdown-content-row">
+                            <a  href="service.html">Dịch vụ</a>
+                        </span>
+                        <span class="dropdown-content-row">
+                            <a  href="#">Tin tức</a>
+                        </span>
+                    </div>
+                </div>
+                <!-- <a><input  class="typeForSeach" type="text " placeholder="Nhập để tìm kiếm "><i class="fa fa-search "></i>
+                    
+                </a> -->
+
+                <a href="giohang.html" style="margin-left:30px; background-color:#db7093;" class="menu-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="countProductsInCart2"><span id="cart-count-info" style="background-color:wheat;top:7px;right:29%; color:black;">0</span></div>
+                    <span style="text-align: center; font-size:15px">Giỏ hàng</span>
+                </a>
+                <a href="favorite.html" style="margin-left:30px; background-color:#db7093;" class="menu-btn" id="cart-btn">
+                    <i class="fas fa-heart"></i>
+                    
+                    <span style="text-align: center; font-size:15px">Yêu thích</span>
+                </a>
+
+                <a href="sign-in.html" class="menu-btn">
+                    <i class="fas fa-user-circle "></i>
+                    <span style="text-align: center;">Đăng nhập</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="header-bottom" id="header-bottom">
+            <div class="header_bottom--top">
+                <div class="logo">
+                    <a href="index.html"><img class="logo-img" src="./library/Logo.png" alt=""></a>
+                </div>
+                <div class="others">
+                    <li class="thanh-tim-kiem">
+                        <input onkeyup="searchFunc()" id="menu__search" type="text" placeholder="Nhập để tìm kiếm"><i class="fa fa-search" id="myBtnSearch" onclick="gotoSearchDetail()"></i>
+                        <ul id="search__list">
+
+                        </ul>
+                    </li>
+                    <li class="countProductsInCart1">
+                        <a href="giohang.html" style="margin-left:30px; background-color:white;" class="btn-card menu-btn" id="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count-info">0</span>
+                            <span style="text-align: center; font-size:15px">Giỏ hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="favorite.html" style="margin-left:30px;" class="menu-btn" id="cart-btn">
+                            <i class="fas fa-heart"></i>
+                            
+                            <span style="text-align: center;">Yêu thích</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sign-in.html" class="btn-user menu-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span style="text-align: center">Đăng nhập</span>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span style="font-weight: bold; text-align: left;">Hotline: 
+                            <br/>088.633.8357</span>
+                    </li>
+                </div>
+            </div>
+            <div class="header_bottom--menu">
+                <li><a href="index.html">Trang chủ</a> </li>
+                <li>
+                    <a href="Dog-Product.html">Chó</a>
+                    <ul class="sub-menu">
+                        <img src="./library/dog-195x195-shopcircle.png" alt="">
+                        <li><a href="Dog-Product.html?category=d_fo">Thức ăn</a></li>
+                        <li><a href="Dog-Product.html?category=d_cl">Quần áo</a></li>
+                        <li><a href="Dog-Product.html?category=d_co">Vòng cổ, dây dắt, rọ mõm</a></li>
+                        <li><a href="Dog-Product.html?category=d_ds">Dụng cụ ăn uống</a></li>
+                        <li><a href="Dog-Product.html?category=d_be">Mỹ phẩm, dụng cụ làm đẹp</a></li>
+                        <li><a href="Dog-Product.html?category=d_ca">Chuồng, giường, nhà, túi</a></li>
+                        <li><a href="Dog-Product.html?category=d_toy">Đồ chơi, phụ kiện huấn luyện</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="Cat-Product.html">Mèo</a>
+                    <ul class="sub-menu">
+                        <img src="./library/cat-195x195-shopcircle.png" alt="">
+                        <li><a href="Cat-Product.html?category=c_fo">Thức ăn</a></li>
+                        <li><a href="Cat-Product.html?category=c_cl">Quần áo</a></li>
+                        <li><a href="Cat-Product.html?category=c_co">Vòng cổ, dây dắt, rọ mõm</a></li>
+                        <li><a href="Cat-Product.html?category=c_ds">Dụng cụ ăn uống</a></li>
+                        <li><a href="Cat-Product.html?category=c_be">Mỹ phẩm, dụng cụ làm đẹp</a></li>
+                        <li><a href="Cat-Product.html?category=c_ca">Chuồng, giường, nhà, túi</a></li>
+                        <li><a href="Cat-Product.html?category=c_toy">Đồ chơi, phụ kiện huấn luyện</a></li>
+                        <li><a href="Cat-Product.html?category=c_sa">Cát vệ sinh</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Dịch vụ</a> </li>
+                <li><a href="MarpetNews.html">Tin tức</a> </li>
+            </div>
+        </div>
+    </div>
+    <!-- ------------header for mobile screen---------- -->
+    <div class="header-mobile">
+        <div id="sideMenu" class="side-mobile-menu-container">
+            <div class="close">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="side-mobile-menu">
+                <div class="side-mobile-menu--top">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="Dog-Product.html">Chó</a>
+                    <a href="Cat-Product.html">Mèo</a>
+                    <a href="service.html">Dịch vụ</a>
+                    <a href="MarpetNews.html">Tin tức</a>
+                </div>
+                <div class="side-mobile-menu--bottom">
+                    <a href="sign-in.html" class="btn-user menu-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span style="text-align: center">Đăng nhập</span>
+                    </a>
+                    <a href="favorite.html" class="btn-user menu-btn">
+                        <i class="fas fa-heart"></i>
+                        <span style="text-align: center">Yêu thích</span>
+                    </a>
+                    <a>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>088.633.8357</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile-top" id="nav-for-mobile">
+            <div class="header-mobile-top--left">
+                <a onclick="openNav()"><i class="fas fa-bars "></i></a>
+            </div>
+            <div class="header-mobile-top--middle">
+                <a href="index.html"><img src="./library/Logo.png" alt=""></a>
+            </div>
+            <div class="header-mobile-top--right">
+                <a href="giohang.html" style="margin-left:30px; border: none;" class="countProductsInCart3 btn-card menu-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count-info">0</span>
+                    <span style="text-align: center; font-size:15px">Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-mobile-bottom">
+            <a><input onkeyup="searchFuncMobile()" id="menu__search--mobile" class="typeForSeach" type="search " placeholder="Nhập để tìm kiếm "><i class="fa fa-search " id="myBtnSearchMobile" onclick="gotoSearchDetailMobile()"></i>
+            </a>
+            <ul id="search__list--mobile">
+                
+            </ul>
+            
+        </div>
+    </div>
+    <!-- -----------------fixed button on screen----------- -->
+    <img src="./library/back-to-top-icon-png-0.png" class=" fixed-btn" onclick="topFunction()" id="topBtn" title="Go to top">
+    <!-- Khi nhấp vào thì chuyển qua trang messenger fb của shop -->
+    <!-- <a href="https://m.me/107421025083727" target="blank"><img style="z-index:9999999999999" src="./library/480px-Facebook_Messenger_logo_2020.svg.png" class="open-button-2 fixed-btn"></img>
+    </a> -->
+    <!-- Khi nhấp vào thì mở ô chat box để gửi tn -->
+    <!-- <img src="./library/sms-3.png" class="open-button-1 fixed-btn" onclick="openForm()" style="z-index:9999999999999"></img>
+
+    <div class="chat-popup" id="myForm">
+
+        <img src="./library/cattt.gif" style="width: 150px; position:absolute; top:-95px; right:25%;">
+        <form action="" class="form-container">
+            <img src="./library/close-window-icon-512.png" style="width: 10%; float: right; cursor: pointer;" type="button" onclick="closeForm()">
+            <br>
+            <br>
+            <h1 style="text-align: center;">GỬI THẮC MẮC</h1>
+            <h1 style="text-align: center;" for="msg"><b>CHO CHÚNG TÔI</b></h1>
+
+            <hr style="width:50%; margin:auto; background-color:black; height:2px; border: 1px solid white; border-radius: 5px;">
+            <input class="inputNameOnChatPopUp" type="text" placeholder="Họ tên">
+            <input class="inputEmailOnChatPopUp" type="text" placeholder="Email hoặc số điện thoại">
+            <textarea placeholder="Nội dung" name="msg" required></textarea>
+
+            <button type="submit" class="btn">
+                <img src="./library/send-message-icon-26.jpg" style="width: 10%;  position: absolute; right:170px; bottom:30px">
+                <span style="margin-left:30px">GỬI NGAY</span>
+            </button>
+        </form>
+    </div> -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script src="./js/fbPlugin.js"></script>
+    
+    <script>
+        window.onload = function() {
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+
+                modal.style.display = "block";
+
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            }
+            // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="./js/dog-product.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/products_detail.js"></script>
+</body>
+</html>

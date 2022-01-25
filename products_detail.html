@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tieuDeSanPham">Chi tiết sản phẩm</title>
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <link rel="stylesheet" href="./css/products_detail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+    <script>
+        function getUrlParams() {
+            var params = {};
+            var queryString = window.location.href.replace(
+                /[?&]+([^=&]+)=([^&]*)/gi,
+                function (m, key, value) {
+                    params[key] = value;
+                }
+            );
+            return params;
+        }
+        var id = unescape(getUrlParams().productid);
+    </script>
+    <script>
+        function getSrc(x) {
+            var src = x.children[0].src;
+            // alert(src);
+            document.getElementById('products_detail-img').innerHTML = '<img src="' + src + '" alt="">'
+        }
+    </script>
+
+
+<script src="./js/products_detail.js"></script>
+
+</head>
+
+<body>
+    <!-- chèn html header -->
+    <!-- <div w3-include-html="header.html"></div> -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+    <div class="products_detail_container" id='container'>
+        <div class="products_main">
+            <div class="products_content">
+                <div class="products_gallery" id="products_gallery">
+                    <div class="products_gallery-left">
+                        <div class="products_gallery-slider">
+                            <div style="text-align:center" class="dot_container">
+                                <span class="dot" onclick="showImg()">
+                                    <img src="" alt="">
+                                </span>
+                            </div>
+                            <div class="products_detail-img" id="products_detail-img">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products_infor">
+                    <div class="products_infor-summary" id="products_infor-summary">
+                        <a href="" class="brand_name"></a>
+                        <h1 class="products_name"></h1>
+                    </div>
+
+                    <!-- đây -->
+
+                    <div class="products_buybox-wrapper">
+                        <div class="products_buybox-options">
+                            <div class="products_price">
+                                <div class="price-original">
+                                    <label>Giá bán:</label>
+                                    <span class="price-amount">
+                                        <span class="price"></span>
+                                        <span style="font-weight: 700;"></span>
+                                    </span>
+                                </div>
+                                <div class="price-discount">
+                                    <label>Giá khuyến mãi:</label>
+                                    <span class="price-amount">
+                                        <span class="price"></span>
+                                        <span style="color: #b93505; font-weight: 700;"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="availability">
+                                <div class="stock">Tình trạng: Còn hàng</div>
+                            </div>
+                            <div class="button_select-weight">
+                                <div class="weight-label">
+                                    <label>Chọn trọng lượng</label>
+                                </div>
+                                <div class="weight-option">
+
+
+
+                                    <button>đ</button>
+
+
+                                </div>
+                                <div class="button_select-color">
+                                    <div class="color-label">
+                                        <label>Chọn màu sắc</label>
+                                    </div>
+                                    <div class="color-option">
+                                        <div class="btn_color">
+                                            <button class="btn_color-select"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="products_buybox">
+                                <form action="">
+                                    <div class="quantity_select" style="float: left;">
+                                        <div class="quantity-dropdown">
+                                            <label for="quantity">Số lượng</label>
+                                            <fieldset data-quantity>
+                                                <legend>Change quantity</legend>
+                                            </fieldset>
+                                            <button type="submit" name="add-to-cart" class="btn_add-to-cart">Thêm vào
+                                                giỏ hàng</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <script type="module">
+                                    import QuantityInput from './js/quantity.js';
+
+                                    // Set up quantity forms
+                                    (function () {
+                                        let quantities = document.querySelectorAll('[data-quantity]');
+
+                                        if (quantities instanceof Node) quantities = [quantities];
+                                        if (quantities instanceof NodeList) quantities = [].slice.call(quantities);
+                                        if (quantities instanceof Array) {
+                                            quantities.forEach(div => (div.quantity = new QuantityInput(div, 'Down', 'Up')));
+                                        }
+                                    })();
+
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products_detail">
+                <div class="products_detail-description">
+                    <ul class="products_detail-tabs">
+                        <li class="tab-active">
+                            <p>Thông tin chi tiết sản phẩm</p>
+                        </li>
+                    </ul>
+                    <div class="products_description-container">
+                        <div class="products_description">
+
+                            <div class="products_description-text">
+                                <h3 class="products_description-title">Mô tả</h3>
+                                <p id="description"></p>
+                                <br>
+                                <h3 class="products_description-title">Mục đích</h3>
+                                <p></p>
+                                <br>
+                                <h3 class="products_description-title">Hướng dẫn sử dụng</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description_right">
+                    <img src="./library/cattt.gif" alt="">
+                    <div>
+                        <p>MarPet <br /> tự tin làm <br /> bạn hài lòng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- chèn html footer -->
+    <!-- <div w3-include-html="footer.html"></div> -->
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+
+    <script src="./js/flat-menu.js"></script>
+    <!-- <script>
+            let productContainer = document.querySelector(".color-option");
+
+
+            for (let i = 0; i < selectedProduct.color.length; i++) {
+                productContainer.innerHTML += `<button style="background-color: ${selectedProduct.color[i]}"></button>`;
+            }
+        </script> -->
+
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+
+
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+
+</html>

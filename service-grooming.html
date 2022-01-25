@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DỊCH VỤ CẮT TỈA LÔNG CHÓ MÈO</title>
+    <link rel="stylesheet" href="./css/service.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./library/logoko-01.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/09f1ff1e12.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+</head>
+<body>
+    <!-- chèn html header -->
+    <!-- <div w3-include-html="header.html"></div> -->
+    <div id="header"></div>
+    <script>
+        load("header.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("header").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- phần nội dung -->
+    <div class="content-page">
+        <div class="header-page">
+            <img  style="filter: contrast(110%);" src="https://www.kennelwood.com/wp-content/uploads/2015/06/Grooming_Banner_3551x894.png" alt=""> 
+            <div class="header-page-text">
+                <h1>DỊCH VỤ <br/> CẮT TỈA LÔNG <br/> CHÓ MÈO</h1>
+                <hr/>
+                <span>Để thú cưng chỉn chu nhất!</span>
+            </div>
+        </div>
+        <p class="header-text">Bạn đang tìm kiếm địa chỉ cung cấp <b>dịch vụ cắt tỉa lông chó mèo (pet grooming)</b> chuyên nghiệp tại? Tại MarPet, chúng tôi cung cấp đầy đủ tất cả các loại hình dịch vụ chăm sóc và làm đẹp trọn gói tốt nhất dành cho thú cưng.</p>
+        <div class="content color">
+            <h1>CHÚNG TÔI<br/>CAM KẾT</h1>
+            <div class="content-text">Đội ngũ nhân viên được đào tạo về dịch vụ cắt tỉa lông chó mèo chuyên nghiệp và được tham gia nhiều khóa đào tạo chăm sóc thú cưng tại nước ngoài.</div>
+        </div>
+        <div class="content white">
+            <div><img src="https://sites.google.com/site/benhvienthuytphcm/_/rsrc/1523348405558/dich-vu-cat-tia-long-cho-meo-tphcm/dich-vu-cat-tia-long-cho-meo-tphcm.jpg" alt=""></div>
+            <span>
+                <h1 style="margin-bottom: 20px;">VÌ SAO NÊN<br/>CHỌN MARPET?</h1>
+                <div class="content-text">Chúng tôi hiểu rằng thú cưng của mỗi khách hàng đều có nhu cầu chăm sóc khác nhau. Và cần có những giải pháp phù hợp với từng giống. Dịch vụ của chúng tôi luôn sử dụng những dòng sản phẩm tốt nhất đảm bảo an toàn cho vật nuôi. MarPet sẽ tư vấn, cung cấp những dịch vụ chăm sóc hiệu quả và chuyên nghiệp nhất.</div>
+            </span>
+        </div>
+        <div class="content price">
+            <h1>BẢNG GIÁ DỊCH VỤ</h1>
+            <div class="content-text">Bảng giá cắt lông chó mèo đã bao gồm dịch vụ tắm cho chó mèo trọn gói, sấy khô, chải lông rụng, cắt dũa móng, vệ sinh tai mà không phát sinh thêm bất cứ phụ phí nào khác.</div>
+            <div class="box-container">
+                <div class="box">
+                    <p>Áp dụng với thú cưng có trọng lượng dưới 2kg</p>
+                    <h2>250k</h2>
+                </div>
+                <div class="box">
+                    <p>Áp dụng với thú cưng có trọng lượng dưới 5kg</p>
+                    <h2>350k</h2>
+                </div>
+                <div class="box">
+                    <p>Áp dụng với thú cưng có trọng lượng dưới 10kg</p>
+                    <h2>500k</h2>
+                </div>
+                <div class="box">
+                    <p>Áp dụng với thú cưng có trọng lượng dưới 20kg</p>
+                    <h2>650k</h2>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>XIN VUI LÒNG LIÊN HỆ: 088.633.8357</h3>
+        </div>
+    </div>
+
+    <!-- chèn html footer -->
+    <!-- <div w3-include-html="footer.html"></div> -->
+    <div id="footer"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById("footer").innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- function để chèn html -->
+    <script>
+        w3.includeHTML();
+    </script>
+    <!-- js mở chatbox và quay về đầu trang -->
+    <script src="./js/chatBox&returnTop-btn.js"></script>
+    <!-- js khi kéo xuống thì hiện 1 thanh nav cố định ở đầu trang web  -->
+    <script src="./js/flat-menu.js"></script>
+
+    <!-- js xổ ra các mục nhỏ của footer khi trình duyệt thu nhỏ -->
+    <script src="./js/footer.js"></script>
+    
+    <script src="./js/products_detail.js"></script>
+    <script src="./js/searchHeader.js"></script>
+    <script src="./js/searchdetails.js"></script>
+    <script src="./js/searchMobile.js"></script>
+    <script src="./js/fbPlugin.js"></script>
+</body>
+</html>
